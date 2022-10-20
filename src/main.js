@@ -19,10 +19,7 @@ function setCardType(type) {
 
 
 
-// V A L I D A N D O    O    CVC (maximo 4 numeros e aceitar somente numeros)
-// https://imask.js.org/guide.html
-// colocou o # para pegar o elemento css pelo id (classe pega pelo .)
-// outra forma de fazer => const securityCode = document.getElementById("security-code")
+
 
 const securityCode = document.querySelector("#security-code")
 const securityCodePattern = {
@@ -50,13 +47,7 @@ const expirationDatePattern = {
 }
 const expirationDateMasked = IMask(expirationDate, expirationDatePattern)
 
-// V  I S A
-// - inicia com 4 seguido de mais 15 digitios
-//-------------------------------------------------------------
-// M A S T E R C A R D
-// - inicia com 5 seguido de um digito em 1 e 5, seguido de mais 23 digitos
-// - ou inicia com 22 seguido de um digito entre 2 e 9
-// - ou inicia com 2 seguido de um digito entre 2 e 3, seguido de mais 2 digitos seguido de mais 12 digitos
+
 
 const cardNumber = document.querySelector("#card-number")
 const cardNumberPattern = {
@@ -101,7 +92,7 @@ buttonForm.addEventListener("submit", (event) => {
   event.preventDefault()
 })
 
-// CAPTURAR ACAO DE DIGITAR O TITULAR DO CARTAO E COLOCAR NA REPRESENTACAO DO CARTAO
+
 const cardHolder = document.querySelector("#card-holder")
 cardHolder.addEventListener("input", () => {
   const ccHolder = document.querySelector(".cc-holder .value");
@@ -115,10 +106,6 @@ cardHolder.addEventListener("input", () => {
 
 })
 
-
-// CAPTURANDO O CVC DO CARTAO PARA COLOCAR NA REPRESENTACAO DO CARTAO
-// securityCodeMasked.on => mesma logica o eventListener
-//accept -> foi aceito pela mascara
 
 
 securityCodeMasked.on("accept", () => {
@@ -138,7 +125,7 @@ function updateSecurityCode(code){
 
 
 
-// CAPTURANDO O NUMERO DO CARTAO PARA COLOCAR NA REPRESENTACAO DO CARTAO
+
 cardNumberMasked.on("accept" , () => {
 
   const cardType = cardNumberMasked.masked.currentMask.cardtype
@@ -160,7 +147,6 @@ function updateCardNumber(number) {
 }
 
 
-// CAPTURANDO A DATA DE EXPIRACAO DO CARTAO PARA COLOCAR NA REPRESENTACAO DO CARTAO
 expirationDateMasked.on("accept", () => {
   updateExpirationDate(expirationDateMasked.value)
 })
