@@ -80,13 +80,12 @@ const cardNumberPattern = {
 }
 const cardNumberMasked = IMask(cardNumber, cardNumberPattern)
 
-// MONITORAR O CLIQUE DO BOTAO
 const addButton = document.querySelector("#add-card")
 addButton.addEventListener("click", () => {
   alert("Your card has been added...")
 })
 
-// DESABILITAR RELOAD DA PAGINA AO CLICAR NO BOTAO
+
 const buttonForm = document.querySelector("form")
 buttonForm.addEventListener("submit", (event) => {
   event.preventDefault()
