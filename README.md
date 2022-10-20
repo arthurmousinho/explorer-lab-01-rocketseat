@@ -11,9 +11,9 @@ Evento exclusivo e gratuito, promovido pela Rocketseat para ensino de tecnologia
   <a href="#memo-licença">Licença</a>
 </p>
 
-<p align="center">
- ![project](https://user-images.githubusercontent.com/102264203/196979848-b9da4b65-25ac-42cb-94a6-837304d02287.png)
-</p>
+
+(https://user-images.githubusercontent.com/102264203/196979848-b9da4b65-25ac-42cb-94a6-837304d02287.png)
+
 
 <br>
 
